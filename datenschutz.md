@@ -1,56 +1,64 @@
-# Datenschutzerklärung für Custom GPT "Memory-GPT"
+# Datenschutzerklärung für Custom GPT „Memory-GPT“
 
-## Verantwortlicher
+## Allgemeines
 
-Dieses GPT wurde von einer Privatperson bzw. Entwickler:in zur Demonstration einer Vektor-basierten Textspeicherung entwickelt. Bei Fragen oder Anliegen wenden Sie sich bitte an:
+Dieses GPT ermöglicht es Nutzern, Texte in einer öffentlich zugänglichen Vektor-Datenbank (Pinecone) zu speichern, ähnliche Inhalte abzufragen oder gespeicherte Einträge zu löschen. Die Datenbank ist über eine offene API angebunden und nicht an einzelne Nutzerkonten gebunden.
 
-📧 E-Mail: [designamo@outlook.de]
+Die Nutzung dieses GPTs erfolgt freiwillig und anonym. Es findet keine Authentifizierung oder Nutzeridentifikation statt.
 
 ---
 
 ## Welche Daten werden verarbeitet?
 
-Wenn Sie dieses GPT verwenden, werden von Ihnen eingegebene Texteingaben verarbeitet. Diese dienen ausschließlich folgenden Zwecken:
-
-- Erzeugung von Vektor-Embeddings mittels OpenAI (text-embedding-3-small)
-- Speicherung der Embeddings in einer Pinecone-Datenbank
-- Möglichkeit, ähnliche Einträge zu finden oder vorhandene zu löschen
+- Texte, die von Nutzern über das GPT eingegeben werden
+- Embeddings (Vektorrepräsentationen) dieser Texte, erzeugt über OpenAI
+- Speicherung dieser Daten in einem gemeinsam genutzten Pinecone-Index
 
 ---
 
-## Wer hat Zugriff auf die Daten?
+## Wer kann auf die Daten zugreifen?
 
-Die verarbeiteten Daten werden **nicht öffentlich gespeichert oder veröffentlicht**. Sie sind nur über die vom GPT gesteuerten API-Aufrufe zugänglich. Der Entwickler hat keinen systematischen Zugriff auf Ihre Texteingaben.
+Alle Nutzer, die dieses GPT verwenden, haben technischen Zugriff auf **alle gespeicherten Inhalte** in der Datenbank. Es gibt **keine Zugriffsbeschränkung** zwischen einzelnen Nutzern.
 
-Die verwendeten Drittanbieter sind:
+Das bedeutet:
 
-- **OpenAI, Inc.** (Berechnung von Embeddings): https://openai.com/privacy
-- **Pinecone Systems, Inc.** (Vektor-Datenbank): https://www.pinecone.io/privacy/
-
----
-
-## Wie lange werden die Daten gespeichert?
-
-Die Texte und Vektoren werden in Pinecone gespeichert, bis Sie sie über die bereitgestellte API löschen oder der Dienst neu initialisiert wird. Es erfolgt **keine dauerhafte Archivierung** oder Weitergabe.
+- Inhalte, die von einem Nutzer gespeichert werden, können von anderen Nutzern über die Suchfunktion (Similarity Search) gefunden und gelesen werden.
+- Eine Unterscheidung nach Nutzeridentität findet nicht statt.
+- Daten bleiben in der Datenbank, **bis sie aktiv durch einen Nutzer gelöscht oder die gesamte Datenbank geleert wird**.
 
 ---
 
-## Werden personenbezogene Daten verarbeitet?
+## Keine Speicherung personenbezogener Daten
 
-Das GPT ist nicht dafür ausgelegt, personenbezogene Daten zu speichern. Bitte geben Sie **keine sensiblen oder identifizierbaren Informationen** ein. Sollte dennoch eine solche Eingabe erfolgen, geschieht dies freiwillig und auf eigenes Risiko.
+Dieses GPT ist **nicht dafür vorgesehen, personenbezogene Daten zu speichern oder zu verarbeiten**. Nutzer werden ausdrücklich aufgefordert, **keine sensiblen oder identifizierbaren Informationen** einzugeben.
+
+Für sämtliche Inhalte sind allein die Nutzer verantwortlich.
 
 ---
 
-## Rechtsgrundlage (EU DSGVO)
+## Dienste Dritter
 
-Da keine personenbezogenen Daten im engeren Sinne gespeichert oder analysiert werden, besteht **kein umfassender DSGVO-relevanter Verarbeitungszweck**. Die Verarbeitung erfolgt auf Grundlage berechtigter Interessen im Sinne von Art. 6 Abs. 1 lit. f DSGVO (technische Durchführung und Test).
+- **OpenAI, Inc.** – zur Erzeugung von Embeddings: https://openai.com/privacy
+- **Pinecone Systems, Inc.** – Vektor-Datenbankanbieter: https://www.pinecone.io/privacy/
+
+---
+
+## Speicherort und Dauer
+
+Die gespeicherten Daten (Text + Embedding) verbleiben im Pinecone-Index, **bis sie manuell gelöscht werden**. Es erfolgt keine automatische Löschung, keine Zeitbegrenzung und keine systematische Verwaltung durch den Betreiber.
+
+---
+
+## Haftungsausschluss
+
+Der Betreiber dieses GPTs übernimmt keine Haftung für Inhalte, die durch Dritte eingegeben und öffentlich zugänglich gemacht werden. Die Plattform dient ausschließlich Demonstrations- und Entwicklungszwecken.
 
 ---
 
 ## Kontakt
 
-Wenn Sie Fragen oder Anliegen zur Datenverarbeitung haben, kontaktieren Sie uns gerne unter:
+Für Fragen oder Anliegen zur Datenverarbeitung wenden Sie sich an:
 
-📧 [deine.email@example.com]
+📧 [designamo@outlook.de]
 
 Stand: Juli 2025
